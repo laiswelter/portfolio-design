@@ -1,0 +1,343 @@
+/**
+ * Clay Design System — CSS Variables
+ * Version: alpha
+ * Brand: Clay.com
+ *
+ * Font Note: "Plain Black" (licensed) is substituted with Outfit weight 500
+ * for display headlines. Inter handles all body, UI, and button type.
+ * Load Outfit + Inter from Google Fonts (via a link tag in the page head)
+ * before using this file.
+ */
+
+/* ─────────────────────────────────────────────────────────
+   COLORS
+───────────────────────────────────────────────────────── */
+
+:root {
+  /* ── Primary / CTA ── */
+  --clay-primary:           #0a0a0a;
+  --clay-primary-active:    #1f1f1f;
+  --clay-primary-disabled:  #e5e5e5;
+
+  /* ── Text ── */
+  --clay-ink:               #0a0a0a;
+  --clay-body:              #3a3a3a;
+  --clay-body-strong:       #1a1a1a;
+  --clay-muted:             #6a6a6a;
+  --clay-muted-soft:        #9a9a9a;
+
+  /* ── Borders ── */
+  --clay-hairline:          #e5e5e5;
+  --clay-hairline-soft:     #f0f0f0;
+
+  /* ── Canvas & Surfaces ── */
+  --clay-canvas:            #fffaf0;
+  --clay-surface-soft:      #faf5e8;
+  --clay-surface-card:      #f5f0e0;
+  --clay-surface-strong:    #ebe6d6;
+  --clay-surface-dark:      #0a1a1a;
+  --clay-surface-dark-elevated: #1a2a2a;
+
+  /* ── On-color Text ── */
+  --clay-on-primary:        #ffffff;
+  --clay-on-dark:           #ffffff;
+  --clay-on-dark-soft:      #a0a0a0;
+
+  /* ── Brand Accent Palette ── */
+  --clay-brand-pink:        #ff4d8b;
+  --clay-brand-teal:        #1a3a3a;
+  --clay-brand-lavender:    #b8a4ed;
+  --clay-brand-peach:       #ffb084;
+  --clay-brand-ochre:       #e8b94a;
+  --clay-brand-mint:        #a4d4c5;
+  --clay-brand-coral:       #ff6b5a;
+
+  /* ── Semantic ── */
+  --clay-success:           #22c55e;
+  --clay-warning:           #f59e0b;
+  --clay-error:             #ef4444;
+}
+
+/* ─────────────────────────────────────────────────────────
+   TYPOGRAPHY
+───────────────────────────────────────────────────────── */
+
+:root {
+  /* ── Font Families ── */
+  --clay-font-display: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --clay-font-body:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* ── Display Scale (Plain Black substitute: Outfit 500) ── */
+  --clay-display-xl-size:     72px;
+  --clay-display-xl-weight:   500;
+  --clay-display-xl-lh:       1;
+  --clay-display-xl-ls:       -2.5px;
+
+  --clay-display-lg-size:     56px;
+  --clay-display-lg-weight:   500;
+  --clay-display-lg-lh:       1.05;
+  --clay-display-lg-ls:       -2px;
+
+  --clay-display-md-size:     40px;
+  --clay-display-md-weight:   500;
+  --clay-display-md-lh:       1.1;
+  --clay-display-md-ls:       -1px;
+
+  --clay-display-sm-size:     32px;
+  --clay-display-sm-weight:   500;
+  --clay-display-sm-lh:       1.15;
+  --clay-display-sm-ls:       -0.5px;
+
+  /* ── Title Scale (Inter 600) ── */
+  --clay-title-lg-size:       24px;
+  --clay-title-lg-weight:     600;
+  --clay-title-lg-lh:         1.3;
+  --clay-title-lg-ls:         -0.3px;
+
+  --clay-title-md-size:       18px;
+  --clay-title-md-weight:     600;
+  --clay-title-md-lh:         1.4;
+  --clay-title-md-ls:         0;
+
+  --clay-title-sm-size:       16px;
+  --clay-title-sm-weight:     600;
+  --clay-title-sm-lh:         1.4;
+  --clay-title-sm-ls:         0;
+
+  /* ── Body Scale (Inter 400) ── */
+  --clay-body-md-size:        16px;
+  --clay-body-md-weight:      400;
+  --clay-body-md-lh:          1.55;
+  --clay-body-md-ls:          0;
+
+  --clay-body-sm-size:        14px;
+  --clay-body-sm-weight:      400;
+  --clay-body-sm-lh:          1.55;
+  --clay-body-sm-ls:          0;
+
+  /* ── UI / Utility Scale ── */
+  --clay-caption-size:        13px;
+  --clay-caption-weight:      500;
+  --clay-caption-lh:          1.4;
+  --clay-caption-ls:          0;
+
+  --clay-caption-uc-size:     12px;
+  --clay-caption-uc-weight:   600;
+  --clay-caption-uc-lh:       1.4;
+  --clay-caption-uc-ls:       1.5px;
+
+  --clay-button-size:         14px;
+  --clay-button-weight:       600;
+  --clay-button-lh:           1;
+  --clay-button-ls:           0;
+
+  --clay-nav-link-size:       14px;
+  --clay-nav-link-weight:     500;
+  --clay-nav-link-lh:         1.4;
+  --clay-nav-link-ls:         0;
+}
+
+/* ─────────────────────────────────────────────────────────
+   SPACING
+───────────────────────────────────────────────────────── */
+
+:root {
+  --clay-space-xxs:     4px;
+  --clay-space-xs:      8px;
+  --clay-space-sm:      12px;
+  --clay-space-md:      16px;
+  --clay-space-lg:      24px;
+  --clay-space-xl:      32px;
+  --clay-space-xxl:     48px;
+  --clay-space-section: 96px;
+}
+
+/* ─────────────────────────────────────────────────────────
+   BORDER RADIUS
+───────────────────────────────────────────────────────── */
+
+:root {
+  --clay-radius-xs:   6px;
+  --clay-radius-sm:   8px;
+  --clay-radius-md:   12px;
+  --clay-radius-lg:   16px;
+  --clay-radius-xl:   24px;
+  --clay-radius-pill: 9999px;
+  --clay-radius-full: 9999px;
+}
+
+/* ─────────────────────────────────────────────────────────
+   SEMANTIC UTILITY CLASSES
+   (Helper classes for rapid prototyping; not production)
+───────────────────────────────────────────────────────── */
+
+/* Type utilities */
+.clay-display-xl {
+  font-family: var(--clay-font-display);
+  font-size: var(--clay-display-xl-size);
+  font-weight: var(--clay-display-xl-weight);
+  line-height: var(--clay-display-xl-lh);
+  letter-spacing: var(--clay-display-xl-ls);
+  color: var(--clay-ink);
+}
+.clay-display-lg {
+  font-family: var(--clay-font-display);
+  font-size: var(--clay-display-lg-size);
+  font-weight: var(--clay-display-lg-weight);
+  line-height: var(--clay-display-lg-lh);
+  letter-spacing: var(--clay-display-lg-ls);
+  color: var(--clay-ink);
+}
+.clay-display-md {
+  font-family: var(--clay-font-display);
+  font-size: var(--clay-display-md-size);
+  font-weight: var(--clay-display-md-weight);
+  line-height: var(--clay-display-md-lh);
+  letter-spacing: var(--clay-display-md-ls);
+  color: var(--clay-ink);
+}
+.clay-display-sm {
+  font-family: var(--clay-font-display);
+  font-size: var(--clay-display-sm-size);
+  font-weight: var(--clay-display-sm-weight);
+  line-height: var(--clay-display-sm-lh);
+  letter-spacing: var(--clay-display-sm-ls);
+  color: var(--clay-ink);
+}
+.clay-title-lg {
+  font-family: var(--clay-font-body);
+  font-size: var(--clay-title-lg-size);
+  font-weight: var(--clay-title-lg-weight);
+  line-height: var(--clay-title-lg-lh);
+  letter-spacing: var(--clay-title-lg-ls);
+}
+.clay-title-md {
+  font-family: var(--clay-font-body);
+  font-size: var(--clay-title-md-size);
+  font-weight: var(--clay-title-md-weight);
+  line-height: var(--clay-title-md-lh);
+}
+.clay-title-sm {
+  font-family: var(--clay-font-body);
+  font-size: var(--clay-title-sm-size);
+  font-weight: var(--clay-title-sm-weight);
+  line-height: var(--clay-title-sm-lh);
+}
+.clay-body-md {
+  font-family: var(--clay-font-body);
+  font-size: var(--clay-body-md-size);
+  font-weight: var(--clay-body-md-weight);
+  line-height: var(--clay-body-md-lh);
+  color: var(--clay-body);
+}
+.clay-body-sm {
+  font-family: var(--clay-font-body);
+  font-size: var(--clay-body-sm-size);
+  font-weight: var(--clay-body-sm-weight);
+  line-height: var(--clay-body-sm-lh);
+  color: var(--clay-body);
+}
+.clay-caption {
+  font-family: var(--clay-font-body);
+  font-size: var(--clay-caption-size);
+  font-weight: var(--clay-caption-weight);
+  line-height: var(--clay-caption-lh);
+  color: var(--clay-muted);
+}
+.clay-caption-uc {
+  font-family: var(--clay-font-body);
+  font-size: var(--clay-caption-uc-size);
+  font-weight: var(--clay-caption-uc-weight);
+  line-height: var(--clay-caption-uc-lh);
+  letter-spacing: var(--clay-caption-uc-ls);
+  text-transform: uppercase;
+  color: var(--clay-muted);
+}
+
+/* Button base */
+.clay-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 12px 20px;
+  border-radius: var(--clay-radius-md);
+  font-family: var(--clay-font-body);
+  font-size: var(--clay-button-size);
+  font-weight: var(--clay-button-weight);
+  line-height: var(--clay-button-lh);
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  transition: background 0.15s ease;
+  white-space: nowrap;
+}
+.clay-btn-primary {
+  background: var(--clay-primary);
+  color: var(--clay-on-primary);
+}
+.clay-btn-primary:hover { background: var(--clay-primary-active); }
+.clay-btn-primary:disabled {
+  background: var(--clay-primary-disabled);
+  color: var(--clay-muted);
+  cursor: not-allowed;
+}
+.clay-btn-secondary {
+  background: var(--clay-canvas);
+  color: var(--clay-ink);
+  border: 1px solid var(--clay-hairline);
+}
+.clay-btn-on-color {
+  background: var(--clay-canvas);
+  color: var(--clay-ink);
+}
+.clay-btn-text {
+  background: transparent;
+  color: var(--clay-ink);
+  padding: 0;
+  height: auto;
+}
+
+/* Input base */
+.clay-input {
+  height: 44px;
+  padding: 12px 16px;
+  background: var(--clay-canvas);
+  color: var(--clay-ink);
+  font-family: var(--clay-font-body);
+  font-size: var(--clay-body-md-size);
+  border: 1px solid var(--clay-hairline);
+  border-radius: var(--clay-radius-md);
+  outline: none;
+  transition: border-color 0.15s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+.clay-input:focus { border-color: var(--clay-ink); }
+
+/* Badge */
+.clay-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  background: var(--clay-surface-card);
+  color: var(--clay-ink);
+  font-family: var(--clay-font-body);
+  font-size: var(--clay-caption-size);
+  font-weight: var(--clay-caption-weight);
+  border-radius: var(--clay-radius-pill);
+  white-space: nowrap;
+}
+
+/* Feature card base */
+.clay-feature-card {
+  border-radius: var(--clay-radius-xl);
+  padding: var(--clay-space-xl);
+  font-family: var(--clay-font-body);
+}
+.clay-feature-card-pink     { background: var(--clay-brand-pink);    color: var(--clay-on-primary); }
+.clay-feature-card-teal     { background: var(--clay-brand-teal);    color: var(--clay-on-dark); }
+.clay-feature-card-lavender { background: var(--clay-brand-lavender); color: var(--clay-ink); }
+.clay-feature-card-peach    { background: var(--clay-brand-peach);   color: var(--clay-ink); }
+.clay-feature-card-ochre    { background: var(--clay-brand-ochre);   color: var(--clay-ink); }
+.clay-feature-card-cream    { background: var(--clay-surface-card);  color: var(--clay-ink); }

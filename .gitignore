@@ -1,0 +1,8 @@
+# Design-process files — not part of the published site
+uploads/
+screenshots/
+.image-slots.state.json
+.thumbnail
+
+# Old single-file bundle exports — archived, not needed for GitHub Pages
+standalone-exports/
