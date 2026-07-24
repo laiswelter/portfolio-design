@@ -1,8 +1,11 @@
 # Design-process files — not part of the published site
 uploads/
 screenshots/
-.image-slots.state.json
 .thumbnail
+
+# NOTE: .image-slots.state.json is NOT excluded — many case-study images
+# (image-slot components without an explicit `src`) load their picture data
+# from this sidecar file at runtime. It must be published alongside the site.
 
 # Old single-file bundle exports — archived, not needed for GitHub Pages
 standalone-exports/
