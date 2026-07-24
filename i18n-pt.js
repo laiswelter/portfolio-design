@@ -147,7 +147,7 @@ window.I18N_PT = {
   'The fastest way to reach me is email. Replies usually land within a day.':
     'O jeito mais rápido de falar comigo é por e-mail. As respostas costumam chegar em até um dia.',
   'Open to senior product roles & select project work for Q3 2026.':
-    'Aberta a vagas Sr. UX/Ui designer',
+    'Aberta a oportunidades para Senior Product Designer.',
   'More work': 'Mais trabalhos',
   'All case studies': 'Todos os cases'
 };
