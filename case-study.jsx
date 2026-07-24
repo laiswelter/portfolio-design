@@ -6,7 +6,7 @@ const { useEffect, useState, useMemo } = React;
 // (window.__resources) and the multi-file GitHub Pages layout
 // (window.ASSET_BASE-prefixed relative path). Local fallback kept in case
 // image-slot.js hasn't loaded yet.
-function bundledUrl(path) {
+function resolveAsset(path) {
   if (!path || typeof path !== 'string' || !path.startsWith('assets/')) return path;
   if (window.bundledUrl) return window.bundledUrl(path);
   const id = path.replace(/^assets\//, '').replace(/\.[^.]+$/, '');
@@ -56,7 +56,7 @@ function Slot({ slug, slot, aspect, className }) {
       radius="20"
       fit={slot.fit || 'cover'}
       hug={slot.fit === 'contain' ? '' : null}
-      src={bundledUrl(slot.src) || null}>
+      src={resolveAsset(slot.src) || null}>
       </image-slot>
     </div>;
   if (!slot.caption) return inner;
@@ -91,7 +91,7 @@ function Carousel({ slug, items, caption, className }) {
             radius="20"
             fit="contain"
             hug=""
-            src={bundledUrl(it.src) || null}>
+            src={resolveAsset(it.src) || null}>
               </image-slot>
             </div>
         )}
@@ -132,7 +132,7 @@ function BeforeAfter({ slug, data, className }) {
         radius="16"
         fit="contain"
         hug=""
-        src={bundledUrl(item.src) || null}>
+        src={resolveAsset(item.src) || null}>
         </image-slot>
       </div>
     </figure>;
@@ -182,7 +182,7 @@ function CaseHero({ p }) {
             radius="24"
             fit={p.heroFit || 'cover'}
             hug={p.heroFit === 'contain' ? '' : null}
-            src={bundledUrl(p.hero) || null}>
+            src={resolveAsset(p.hero) || null}>
           </image-slot>
         </div>
       </div>
@@ -328,7 +328,7 @@ function SlotRow({ slug, items, panelTone, className, caption }) {
           placeholder={it.label || 'Screen'}
           shape="rounded"
           radius="16"
-          src={bundledUrl(it.src) || null}>
+          src={resolveAsset(it.src) || null}>
             </image-slot>
           </div>
       )}
@@ -532,7 +532,7 @@ function SectionBlock({ p, s, i, anchorId }) {
               placeholder={`${s.title} visual`}
               shape="rounded"
               radius="20"
-              src={bundledUrl(s.media) || null}>
+              src={resolveAsset(s.media) || null}>
               </image-slot>
             </div>
           }
@@ -637,7 +637,7 @@ function CaseNext({ next }) {
               radius="20"
               fit="contain"
               hug=""
-              src={bundledUrl(next.hero)}>
+              src={resolveAsset(next.hero)}>
             </image-slot>
           </a>
         </div>
@@ -652,7 +652,7 @@ function CaseContact() {
         <div className="lw-cta2">
           <div className="lw-cta2-top">
             <div className="lw-cta2-avatar">
-              <img src={bundledUrl('assets/lais-portrait.png')} alt="Lais Welter" />
+              <img src={resolveAsset('assets/lais-portrait.png')} alt="Lais Welter" />
               <span className="lw-cta2-avatar-dot" aria-hidden="true"></span>
             </div>
             <div className="lw-cta2-status">
